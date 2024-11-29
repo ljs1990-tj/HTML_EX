@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/guide.css">
+    <link rel="stylesheet" href="static/libs/fullcalendar/fullcalendar-5.3.2.css">
+    <link rel="stylesheet" href="static/css/components.css">
+
+    <style media="screen">
+        .syntaxhighlighter .line.alt1 {
+            background-color: #f0f0f0 !important;
+        }
+
+        .syntaxhighlighter table td.gutter .line {
+            padding: 0.3em 1em !important;
+        }
+
+        .syntaxhighlighter {
+            overflow-y: hidden ! important;
+        }
+
+        .syntaxhighlighter table td.code .line {
+            padding: 0.3em 1em !important;
+        }
+
+        .syntaxhighlighter table {
+            table-layout: auto;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.min.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="static/js/ui.utility.js"></script>
+    <script type="text/javascript" src="static/js/MultiClamp.min.js"></script>
+    <script src="static/js/guide.js"></script>
+    <script src="static/libs/fullcalendar/fullcalendar-5.3.2.js"></script>
+    <script src="static/js/components.js"></script>
+</head>
+<body>
+    <article>
+        <h3>List</h3>
+
+        <div class="content-body">
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>Notice</h4>
+                </header>
+
+
+                <!-- list (notice) -->
+                <div class="section-body">
+
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-1">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-2">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="tbl-group">
+                                <div class="tbl tbl-list">
+                                    <table>
+                                        <caption>
+                                            <strong>게시판 목록</strong>
+                                            <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width:80px" />
+                                            <col style="width:*" />
+                                            <col style="width:80px" />
+                                            <col style="width:110px" />
+                                            <col style="width:80px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="col-number" scope="col">번호</th>
+                                                <th class="col-title" scope="col">제목</th>
+                                                <th class="col-writer" scope="col">작성자</th>
+                                                <th class="col-date" scope="col">작성일</th>
+                                                <th class="col-view" scope="col">조회수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-02-02</td>
+                                                <td class="col-view">999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-02-02</td>
+                                                <td class="col-view">999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-02-02</td>
+                                                <td class="col-view">999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-02-02</td>
+                                                <td class="col-view">999</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-1" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="tbl-group">
+            <div class="tbl tbl-list">
+              <table>
+                <caption>
+                  <strong>게시판 목록</strong>
+                  <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                </caption>
+                <colgroup>
+                  <col style="width:80px" />
+                  <col style="width:*" />
+                  <col style="width:80px" />
+                  <col style="width:110px" />
+                  <col style="width:80px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="col-number" scope="col">번호</th>
+                    <th class="col-title" scope="col">제목</th>
+                    <th class="col-writer" scope="col">작성자</th>
+                    <th class="col-date" scope="col">작성일</th>
+                    <th class="col-view" scope="col">조회수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-number">999</td>
+                    <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                    <td class="col-writer">관리자</td>
+                    <td class="col-date">2021-02-02</td>
+                    <td class="col-view">999</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-2" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+                            /* List Type */
+                            .tbl-list {border-top:2px solid #444; border-bottom:1px solid #444;}
+                            .tbl-list th, .tbl-list td {padding:5px 10px; text-align:left; line-height:18px; text-align:center; vertical-align: middle;}
+                            .tbl-list th {height:40px; border-bottom:1px solid #444;}
+                            .tbl-list td {height:40px; border-top:1px solid #ddd;}
+                            .tbl-list thead + tbody tr:first-child td {border-top:0;}
+                            .tbl-list .fixed-data td {background-color:#fafafa;}</pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // list (notice) -->
+            </section>
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>Q&A</h4>
+                </header>
+                <!-- list (Q&A) -->
+                <div class="section-body">
+
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-3">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-4">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="tbl-group">
+                                <div class="tbl tbl-list">
+                                    <table>
+                                        <caption>
+                                            <strong>게시판 목록</strong>
+                                            <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width:80px" />
+                                            <col style="width:*" />
+                                            <col style="width:80px" />
+                                            <col style="width:110px" />
+                                            <col style="width:100px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="col-number" scope="col">번호</th>
+                                                <th class="col-title" scope="col">제목</th>
+                                                <th class="col-writer" scope="col">작성자</th>
+                                                <th class="col-date" scope="col">작성일</th>
+                                                <th class="col-state" scope="col">답변 상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-08-19</td>
+                                                <td class="col-status">
+                                                    <span class="wait">대기</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-08-19</td>
+                                                <td class="col-status">
+                                                    <span class="wait">대기</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-08-19</td>
+                                                <td class="col-status">
+                                                    <span class="wait">대기</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-number">999</td>
+                                                <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                                                <td class="col-writer">관리자</td>
+                                                <td class="col-date">2021-08-19</td>
+                                                <td class="col-status">
+                                                    <span class="done">완료</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-3" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="tbl-group">
+            <div class="tbl tbl-list">
+              <table>
+                <caption>
+                  <strong>게시판 목록</strong>
+                  <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                </caption>
+                <colgroup>
+                  <col style="width:80px" />
+                  <col style="width:*" />
+                  <col style="width:80px" />
+                  <col style="width:110px" />
+                  <col style="width:100px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="col-number" scope="col">번호</th>
+                    <th class="col-title" scope="col">제목</th>
+                    <th class="col-writer" scope="col">작성자</th>
+                    <th class="col-date" scope="col">작성일</th>
+                    <th class="col-state" scope="col">답변 상태</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-number">999</td>
+                    <td class="col-title align-l">공지사항의 제목입니다. 공지사항의 제목입니다.</td>
+                    <td class="col-writer">관리자</td>
+                    <td class="col-date">2021-08-19</td>
+                    <td class="col-status">
+                      <span class="wait">대기</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-4" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+          /* list (Q&A) */
+          .tbl tbody tr td.col-status span {display: inline-block; vertical-align: middle; box-sizing: border-box; width: 55px; height: 25px; border: 2px solid transparent; border-radius: 13px; text-align: center; font-weight: 400; font-size: 13px; line-height: 21px; letter-spacing: 0;}
+          .tbl tbody tr td.col-status span.wait {border-color: #BDBDBD; background: #FAFAFA; color: #757575;}
+          .tbl tbody tr td.col-status span.done {background: #FAA619; color: #fff;}</pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // list (Q&A) -->
+
+
+            </section>
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>FAQ</h4>
+                </header>
+                <!-- list (FAQ) -->
+                <div class="section-body">
+
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-5">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-6">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="category">
+                                <ul class="faq-list" id="list">
+                                    <li>
+                                        <p class="subject on">
+                                            <strong>Q.</strong>
+                                            <a herf="javascript:">FAQ 공지사항의 제목입니다.</a>
+                                        </p>
+                                        <div class="hide_cont">
+                                            <div class="answer">
+                                                <div>
+                                                    <p>
+                                                        FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.
+                                                    </p>
+                                                    <p>
+                                                        FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="subject">
+                                            <strong>Q.</strong>
+                                            <a herf="javascript:">FAQ 공지사항의 제목입니다.</a>
+                                        </p>
+                                        <div class="hide_cont">
+                                            <div class="answer">
+                                                <p>
+                                                    FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.
+                                                </p>
+                                                <p>
+                                                    FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.<em>FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.</em>FAQ 답변입니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="subject">
+                                            <strong>Q.</strong>
+                                            <a herf="javascript:">FAQ 공지사항의 제목입니다.</a>
+                                        </p>
+                                        <div class="hide_cont">
+                                            <div class="answer">
+                                                <p>
+                                                    FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.
+                                                </p>
+                                                <p>
+                                                    FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.<em>FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.</em>FAQ 답변입니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-5" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="category">
+            <ul class="faq-list" id="list">
+              <li>
+                <p class="subject on">
+                  <strong>Q.</strong>
+                  <a herf="javascript:">FAQ 공지사항의 제목입니다.</a>
+                </p>
+                <div class="hide_cont">
+                  <div class="answer">
+                    <div>
+                      <p>
+                        FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.
+                      </p>
+                      <p>
+                        FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.FAQ 답변입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-6" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+          .category { width: 100%;max-width: 1280px; margin:0 auto;position: relative; padding-bottom: 50px;}
+          .category ul { font-size:0;}
+          .category .faq-list {font-size: 15px; margin-bottom: 35px;border-top: 1px solid #1f1f25;}
+          .category .faq-list .subject {border-bottom: 1px solid #ddd; padding:35px; position: relative; cursor: pointer; line-height: 24px; word-break: keep-all;}
+          .category .faq-list li{position: relative;}
+          .category .faq-list li .subject a {display: block;position: relative; font-size: 18px; padding-left: 40px;padding-right: 80px; color:#1f1f25}
+          .category .faq-list li .subject strong { font-size: 18px; position:absolute; top:50%; transform: translateY(-58%);font-size:24px; color:#ddd; font-family: nanumsquare,sans-serif;}
+          .category .faq-list li .subject.on strong {color:#bd000f}
+          .category .faq-list li .subject a:after {content: '';
+          position: absolute; background:url(../imgs/common/faq_arrow.png ) no-repeat; width:32px;height: 32px; right: 30px; top:50%; transform: translateY(-50%);}
+          .category .faq-list li .subject.on a:after {content: '';
+          position: absolute; background:url(../imgs/common/faq_arrow.png ) no-repeat; width:32px;height: 32px; right: 30px; top:50%; transform: translateY(-50%) rotate(-180deg);transition-duration: 0.5s}
+          .category .faq-list li .subject a strong{margin-right: 15px; font-size: 18px; line-height: 24px; word-break: keep-all;}
+          .category .faq-list li .hide_cont {display: none; position:relative; background: #f8f8f8;border-bottom: 1px solid #ddd; padding: 35px;     line-height: 24px; word-break: keep-all;}
+          .category .faq-list li .hide_cont .answer {font-size: 16px; color:#5f5f66; position: relative;}
+          .category .faq-list li .hide_cont .answer p{padding-left: 40px; padding-right: 80px;}
+          .category .faq-list li .hide_cont .answer p strong {color:#d81f25; font-weight: normal}
+          .category .faq-list li .hide_cont .answer p em {font-style: normal; text-decoration: underline; color:#222;}
+        </pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // list (FAQ) -->
+
+            </section>
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>Blog</h4>
+                </header>
+                <!-- list (Blog) -->
+                <div class="section-body">
+
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-7">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-8">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="tbl-group">
+                                <div class="tbl tbl-blog">
+                                    <table>
+                                        <caption>
+                                            <strong>게시판 목록</strong>
+                                            <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width:240px" />
+                                            <col style="width:*" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-thumb">
+                                                    <div class="col_img">
+                                                        <img src="../../static/imgs/common/no-img.jpg" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="col-preview">
+                                                    <a href="javascript:;">
+                                                        <h3>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.<i class="ico_new-post"></i><i class="ico_hot-post"></i></h3>
+                                                        <p>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다...</p>
+                                                    </a>
+                                                    <div class="info">
+                                                        <span class="number"><b>번호 : </b><span>999</span></span>
+                                                        <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                                                        <span class="view"><i class="ri-eye-line"></i><b class="hid">조회</b><span>999</span></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-thumb">
+                                                    <div class="col_img">
+                                                        <img src="../../static/imgs/common/no-img.jpg" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="col-preview">
+                                                    <a href="javascript:;">
+                                                        <h3>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.<i class="ico_new-post"></i><i class="ico_hot-post"></i></h3>
+                                                        <p>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다...</p>
+                                                    </a>
+                                                    <div class="info">
+                                                        <span class="number"><b>번호 : </b><span>999</span></span>
+                                                        <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                                                        <span class="view"><i class="ri-eye-line"></i><b class="hid">조회</b><span>999</span></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-7" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="tbl-group">
+            <div class="tbl tbl-blog">
+              <table>
+                <caption>
+                  <strong>게시판 목록</strong>
+                  <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                </caption>
+                <colgroup>
+                  <col style="width:240px" />
+                  <col style="width:*" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="col-thumb">
+                      <div class="col_img">
+                        <img src="../../static/imgs/common/no-img.jpg" alt="">
+                      </div>
+                    </td>
+                    <td class="col-preview">
+                      <a href="javascript:;">
+                        <h3>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.<i class="ico_new-post"></i><i class="ico_hot-post"></i></h3>
+                        <p>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다...</p>
+                      </a>
+                      <div class="info">
+                        <span class="number"><b>번호 : </b><span>999</span></span>
+                        <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                        <span class="view"><i class="ri-eye-line"></i><b class="hid">조회</b><span>999</span></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-8" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+          /* list (Blog) */
+          .tbl.tbl-blog {border-top: 2px solid #444; border-bottom: 1px solid #444;}
+          .tbl.tbl-blog tbody tr td {vertical-align: middle; height: 64px; border-bottom: 1px solid #E2E8EA; text-align: center; font-weight: 400; font-size: 16px; line-height: 1.5; letter-spacing: 0; color: #616161;}
+          .tbl.tbl-blog tbody tr .col-thumb {padding: 15px 20px; border-right:0;}
+          .tbl.tbl-blog tbody tr .col-thumb .col_img {display: block; width: 100%; max-height: 100%; height: 160px; position: relative; overflow: hidden;}
+          .tbl.tbl-blog tbody tr .col-thumb img {max-width: calc(100% + 30px); max-height: calc(100% + 30px); min-width: 100%; min-height: 100%; position: absolute; left: 50%; transform: translateX(-50%); top: 0}
+          .tbl.tbl-blog tbody tr .col-preview {text-align: left; padding: 25px 0; border-left: 0;}
+          .tbl.tbl-blog tbody tr .col-preview > a {display: block;}
+          .tbl.tbl-blog tbody tr .col-preview h3 {display: inline-block; position: relative; overflow: hidden; box-sizing: border-box; max-width: 100%; padding-right: 46px; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: 20px; line-height: 1.45; letter-spacing: 0; color: #212121; margin-bottom:0;}
+          .tbl.tbl-blog tbody tr .col-preview p {min-height: 3.4286em; margin-top: 16px; font-weight: 400; font-size: 14px; line-height: 1.7143; letter-spacing: 0; color: #757575; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+          .tbl.tbl-blog tbody tr .col-preview .info {margin-top: 15px;}
+          .tbl.tbl-blog tbody tr .col-preview .info > span {font-weight: 400;  font-size: 14px;  line-height: 1.7143; letter-spacing: 0; color: #757270;}
+          .tbl.tbl-blog tbody tr .col-preview .info > span > b {    font-weight: inherit; font-size: inherit; line-height: inherit; letter-spacing: inherit; color: inherit;}
+          .tbl.tbl-blog tbody tr .col-preview .info > span + span::before {display: inline-block; vertical-align: middle; height: 18px; margin: 0 10px; border-left: 1px solid #E0E0E0; content: ""; transform: rotate(36deg);}
+          .tbl.tbl-blog tbody tr .col-preview .info > span i {display: inline-block; vertical-align: middle; margin-right: 4px; font-size: 16px; margin-top: -5px; color: #14BECF;}
+          .tbl.tbl-blog tbody tr:hover .col-preview h3 {color: #14BECF;}
+          .tbl.tbl-blog tbody tr:hover .col-preview p {text-decoration: underline;}
+        </pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // list (blog) -->
+
+            </section>
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>Photo</h4>
+                </header>
+                <!-- list (photo) -->
+                <div class="section-body">
+
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-9">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-10">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <!-- photo list -->
+                            <div class="photo-wrap">
+                                <ul class="photoList clearfix">
+                                    <li class="empty-image">
+                                        <a href="javascript:;">
+                                            <div class="infoTop">
+                                                <span class="thumb">
+                                                    <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="infoBottom">
+                                                <p><span class="multi-clamp-txt">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span></p>
+                                                <div class="clearfix">
+                                                    <span class="date float-l">2020-01-01</span>
+                                                    <span class="view float-r"><span>조회수</span><b>999</b></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="infoTop">
+                                                <span class="thumb">
+                                                    <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="infoBottom">
+                                                <p><span class="multi-clamp-txt">제목입니다.</span></p>
+                                                <div class="clearfix">
+                                                    <span class="date float-l">2020-01-01</span>
+                                                    <span class="view float-r"><span>조회수</span><b>999</b></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="infoTop">
+                                                <span class="thumb">
+                                                    <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="infoBottom">
+                                                <p><span class="multi-clamp-txt">제목입니다.</span></p>
+                                                <div class="clearfix">
+                                                    <span class="date float-l">2020-01-01</span>
+                                                    <span class="view float-r"><span>조회수</span><b>999</b></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="infoTop">
+                                                <span class="thumb">
+                                                    <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="infoBottom">
+                                                <p><span class="multi-clamp-txt">제목입니다.</span></p>
+                                                <div class="clearfix">
+                                                    <span class="date float-l">2020-01-01</span>
+                                                    <span class="view float-r"><span>조회수</span><b>999</b></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="infoTop">
+                                                <span class="thumb">
+                                                    <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="infoBottom">
+                                                <p><span class="multi-clamp-txt">제목입니다.</span></p>
+                                                <div class="clearfix">
+                                                    <span class="date float-l">2020-01-01</span>
+                                                    <span class="view float-r"><span>조회수</span><b>999</b></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="infoTop">
+                                                <span class="thumb">
+                                                    <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="infoBottom">
+                                                <p><span class="multi-clamp-txt">제목입니다.</span></p>
+                                                <div class="clearfix">
+                                                    <span class="date float-l">2020-01-01</span>
+                                                    <span class="view float-r"><span>조회수</span><b>999</b></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //photo list -->
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-9" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="photo-wrap">
+            <ul class="photoList clearfix">
+              <li class="empty-image">
+                <a href="javascript:;">
+                  <div class="infoTop">
+                    <span class="thumb">
+                      <img src="../../static/imgs/common/photo_thum.jpg" alt="">
+                    </span>
+                  </div>
+                  <div class="infoBottom">
+                    <p><span class="multi-clamp-txt">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span></p>
+                    <div class="clearfix">
+                      <span class="date float-l">2020-01-01</span>
+                      <span class="view float-r"><span>조회수</span><b>999</b></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-10" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+          /* list (photo) */
+          .photo-wrap {border-bottom: 1px solid #E2E8EA;}
+          .photo-wrap::before {display: block; height: 8px; background: url(../images/content/bg_tbl-border.png); content: "";}
+          .photoList {border-top: 2px solid #444}
+          .photoList:after {content:''; display: block; clear: both;}
+          .photoList * {transition: all 0.3s;}
+          .photoList li {position: relative; float: left; width: calc((100% - (25px*2))/3); padding: 32px 0; padding-left: 24.9999px; box-sizing: content-box;}
+          .photoList li::after {position: absolute; top: 0; left: 12.5px; height: 16px; border-left: 1px solid #E2E8EA; content: "";}
+          .photoList li:nth-child(3n+1) {padding-left: 0;}
+          .photoList li:nth-child(3n+1)::after {display: none;}
+          .photoList li:nth-child(n+4) {border-top: 1px solid #E2E8EA;}
+          .photoList li > a {display: block; position: relative; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);}
+          .photoList li > a::before {opacity: 0; position: absolute; top: -1px; right: -1px; bottom: -1px; left: -1px; z-index: 1; border: 2px solid #596BD7; border-radius: 8px; content: ""; transition: all 0.1s;}
+          .photoList .infoTop {height: calc((((940px - (25px*2))/3)*1.2)*0.57); text-align: center;}
+          .photoList .infoTop .thumb {display: block; position: relative; overflow: hidden; box-sizing: border-box; width: 100%; height: 100%; border-radius: 8px 8px 0 0; background: #eee;}
+          .photoList .infoTop .thumb img {max-width: 100%; min-height: 100%;}
+          .photoList .infoBottom {box-sizing: border-box; height: 43%; padding: 16px; border-radius: 0 0 8px 8px;}
+          .photoList .infoBottom > span {display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; line-height: 1.4286;}
+          .photoList .infoBottom > span.c1 {color: #009AFF;}
+          .photoList .infoBottom > span.c2 {color: #01937F;}
+          .photoList .infoBottom > span.c3 {color: #1366B6;}
+          .photoList .infoBottom > p {height: 3.2em; font-weight: 700; font-size: 18px; line-height: 1.6; color: #212121;}
+          .photoList .infoBottom > div {margin-top: 12px; font-weight: 300; font-size: 14px; line-height: 1.4286; color: #616161;}
+          .photoList .infoBottom > div .date { font-weight: 400}
+          .photoList .infoBottom > div .view {font-weight: 400}
+          .photoList .infoBottom > div .view > span::after {display: inline-block; height: 9px; margin: 0 5px; border-left: 1px solid #C9D1D5; content: "";}
+          .photoList .infoBottom > div .view > b {color: #596BD7;}
+          .multi-clamp-txt {display: inline-block;}
+          .photoList .infoBottom {position: relative;}
+
+          .photoList li:hover > a::before {opacity: 1;}
+          .photoList li:hover > a .infoBottom > p {text-decoration: underline;}
+          .photoList li.empty {float: none; clear: both; width: 100%;}
+          .photoList li.empty > p {box-sizing: border-box; height: 75px; text-align: center; font-weight: 300; font-size: 16px; line-height: 44px; color: #616161;}
+          .photoList li.empty-image .infoTop .thumb span {position: absolute; top: 50%; right: 0; left: 0; margin-top: -8px; font-weight: 400; font-size: 16px; color: #616161;}
+        </pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // list (photo) -->
+
+
+
+            </section>
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>Calendar</h4>
+                </header>
+                <!-- list (calendar) -->
+                <div class="section-body">
+
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-11">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-12">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="calendar_wrap">
+                                <div class="info">
+                                    <p class="cal_info">원하시는 날짜의 예약 가능한 장소를 선택해 주세요.</p>
+                                    <ul class="res_status">
+                                        <li><span class="label label-success txheader">분</span> 분류 01</li>
+                                        <li><span class="label label-warning txheader">분</span> 분류 02</li>
+                                        <li><span class="label label-danger txheader">분</span> 분류 03</li>
+                                    </ul>
+                                </div>
+                                <!-- calendar area -->
+                                <div id="calendar"></div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-11" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          &lt;div class="calendar_wrap">
+            &lt;div class="info">
+              &lt;p class="cal_info">원하시는 날짜의 예약 가능한 장소를 선택해 주세요.&lt;/p>
+              &lt;ul class="res_status">
+                &lt;li>&lt;span class="label label-success txheader">분&lt;/span> 분류 01&lt;/li>
+                &lt;li>&lt;span class="label label-warning txheader">분&lt;/span> 분류 02&lt;/li>
+                &lt;li>&lt;span class="label label-danger txheader">분&lt;/span> 분류 03&lt;/li>
+              &lt;/ul>
+            &lt;/div>
+            <!-- calendar area -->
+            &lt;div id="calendar">&lt;/div>
+          &lt;/div>
+                        </pre>
+                        </div>
+                        <div id="tab-12" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+          /* calendar */
+          .calendar_wrap{position: relative}
+          .calendar_wrap .select{display: none;}
+          .calendar_wrap .info{ position: absolute; top:65px;left: 0;  width: 100%;}
+
+          /*예약상태*/
+          .res_status { padding-left: 0;    list-style: none;    margin-left: -5px;     float: right;}
+          .res_status li{    display: inline-block;    padding-left: 5px;    padding-right: 5px; font-size: 14px;}
+          .res_status li span{ width: 24px; height: 24px;      display: inline-block;  vertical-align: middle;    text-align: center;     border-radius: 4px;    font-size: 13px;    color: #fff;     line-height: 24px;}
+          .res_status li span.label-success{ background:#50B848  }
+          .res_status li span.label-warning{background: #FAA619  }
+          .res_status li span.label-danger{background: #F34420 }
+          .calendar_wrap .cal_info{  font-weight: 400;    font-size: 16px;    line-height: 1.4286;    color: #616161; display: inline-block}
+
+          /*상단 title*/
+          .fc-button-primary{border: none; background-color: #14BECF !important;     width: 40px;  height: 40px; position: relative; vertical-align: top !important; border-radius: 50% !important;}
+          .fc-button-primary::before{ }
+          .fc-icon-chevron-right::before,
+          .fc-icon-chevron-left::before{position: absolute;    top: 50%;    right: 3px; left: 0; margin: 0 auto; width: 16px;    height: 22px;       transform: translateY(-50%);   background: url(../imgs/common/arrow_cal.png) no-repeat left 0/auto 100%;    content: "";}
+          .fc-icon-chevron-left:before{}
+          .fc-icon-chevron-right:before{transform: translateY(-50%)rotate(180deg); right: -3px; }
+          .fc-button-primary:hover{   background:#004B8C !important;  border: none;}
+          .fc .fc-toolbar-title {display: inline-block; margin: 0; color: #222;  font-weight: 400; padding: 0 60px; line-height: 40px;}
+          /*//상단 title*/
+
+          /*달력시작*/
+          .fc .fc-view-harness {margin-top:35px}
+          .fc-theme-standard th{height: 50px; line-height: 50px;}
+          .fc-theme-standard td,
+          .fc-theme-standard th{ border:none; border-top: 1px solid #ddd;}
+          .fc-theme-standard .fc-scrollgrid{border: none;}
+          .fc-daygrid{border-top:2px solid #14BECF ;}
+          .fc-col-header { border-bottom: 1px solid #14BECF}
+          .fc-theme-standard td + td,
+          .fc-theme-standard th + th{position: relative}
+          .fc-theme-standard td + td::before{position: absolute; content: ''; left: 0; width: 1px; height: 20px; top: 0; background: #E0E0E0;}
+          .fc-theme-standard th + th::before{position: absolute; content: ''; left: 0; width: 1px; height: 15px; top: 0; background: #14becf;}
+          .fc .fc-daygrid-day.fc-day-sun a,
+          .fc-col-header-cell.fc-day-sun a{color: #FB3D5D}
+          .fc .fc-daygrid-day.fc-day-sat a,
+          .fc-col-header-cell.fc-day-sat a{color: #00A5F2}
+
+          /*날짜*/
+          .fc .fc-daygrid-day-top{display: inline-block;}
+          .fc .fc-daygrid-day-number{float: left; font-size: 15px; padding: 5px; color: #424242;}
+
+          /*한국공휴일*/
+          .koHolidays{pointer-events: none;}
+          .koHolidays .fc-event-title{font-size: 12px!important;  padding-left: 0px!important; }
+          .fc .fc-daygrid-day-frame.on .fc-daygrid-day-top a{color: #FB3D5D}
+          .fc-h-event.koHolidays .fc-event-title {color: #FB3D5D}
+        </pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // list (calendar) -->
+
+            </section>
+        </div>
+
+        <!-- view -->
+        <h3>View</h3>
+        <div class="content-body">
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>예시</h4>
+                </header>
+                <div class="section-body">
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-13">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-14">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="bbs-wrap bbs-qna">
+                                <div class="result">
+                                    <div class="read">
+                                        <article>
+                                            <div class="upr">
+                                                <h3><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span></h3>
+                                                <div class="info">
+                                                    <span class="writer"><i class="ri-user-line"></i><b class="hid">작성자</b><span>홍길동</span></span>
+                                                    <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                                                    <span class="tel"><i class="ri-smartphone-line"></i><b class="hid">연락처</b><span>010-1234-5678</span></span>
+                                                    <span class="mail"><i class="ri-mail-line"></i><b class="hid">메일주소</b><span>gioinfra@gioinfra.co.kr</span></span>
+                                                </div>
+                                                <div class="attach">
+                                                    <ul>
+                                                        <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다.jpg (120kb)</span></a></li>
+                                                        <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다.jpg (120kb)</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail">
+                                                <!-- s : Editor View Area -->
+                                                내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.
+                                                <p>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</p>
+                                                <!-- e : Editor View Area -->
+                                            </div>
+                                            <!-- answer -->
+                                            <div class="answer">
+                                                <div class="upr">
+                                                    <h3><span>질문사항 답변입니다.</span></h3>
+                                                    <div class="info">
+                                                        <span class="writer"><i class="ri-user-line"></i><b class="hid">작성자</b><span>홍길동</span></span>
+                                                        <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                                                    </div>
+                                                    <div class="attach">
+                                                        <ul>
+                                                            <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다.jpg (120kb)</span></a></li>
+                                                            <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다.jpg (120kb)</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <!-- s : Editor View Area -->
+                                                    질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다.
+                                                    <p>질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다.</p>
+                                                    <!-- e : Editor View Area -->
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <!-- btns -->
+                                    <div class="btns ac clearfix">
+                                        <div class="float-r">
+                                            <a href="javascript:;" class="btn-dark">삭제</a>
+                                            <a href="javascript:;" class="btn-outline">목록</a>
+                                            <a href="javascript:;" class="btn-outline">수정</a>
+                                            <a href="javascript:;" class="btn-fill">답변</a>
+                                            <a href="javascript:;" class="btn-fill">쓰기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-13" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="bbs-wrap bbs-qna">
+            <div class="result">
+              <div class="read">
+                <article>
+                  <div class="upr">
+                    <h3><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span></h3>
+                    <div class="info">
+                      <span class="writer"><i class="ri-user-line"></i><b class="hid">작성자</b><span>홍길동</span></span>
+                      <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                      <span class="tel"><i class="ri-smartphone-line"></i><b class="hid">연락처</b><span>010-1234-5678</span></span>
+                      <span class="mail"><i class="ri-mail-line"></i><b class="hid">메일주소</b><span>gioinfra@gioinfra.co.kr</span></span>
+                    </div>
+                    <div class="attach">
+                      <ul>
+                        <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다.jpg (120kb)</span></a></li>
+                        <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다.jpg (120kb)</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="detail">
+                    <!-- s : Editor View Area -->
+                    내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.
+                    <p>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</p>
+                    <!-- e : Editor View Area -->
+                  </div>
+                  <!-- answer -->
+                  <div class="answer">
+                    <div class="upr">
+                      <h3><span>질문사항 답변입니다.</span></h3>
+                      <div class="info">
+                        <span class="writer"><i class="ri-user-line"></i><b class="hid">작성자</b><span>홍길동</span></span>
+                        <span class="date"><i class="ri-time-line"></i><b class="hid">작성일</b><span>2020-01-01</span></span>
+                      </div>
+                      <div class="attach">
+                        <ul>
+                          <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다 첨부파일입니다.jpg (120kb)</span></a></li>
+                          <li><a href="javascript:;"><i class="ri-attachment-line"></i><span>첨부파일입니다.jpg (120kb)</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="detail">
+                      <!-- s : Editor View Area -->
+                      질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다.
+                      <p>질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다. 질문사항 답변입니다.</p>
+                      <!-- e : Editor View Area -->
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- btns -->
+              <div class="btns ac clearfix">
+                <div class="float-r">
+                  <a href="javascript:;" class="btn-dark">삭제</a>
+                  <a href="javascript:;" class="btn-outline">목록</a>
+                  <a href="javascript:;" class="btn-outline">수정</a>
+                  <a href="javascript:;" class="btn-fill">답변</a>
+                  <a href="javascript:;" class="btn-fill">쓰기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-14" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+                            /* View Type */
+                            .tbl-view {border-top:2px solid #444; border-bottom:1px solid #444;}
+                            .tbl-view th, .tbl-view td {padding:10px 20px; text-align:left; line-height:18px; border-top:1px solid #ddd;}
+                            .tbl-view tr:first-child th,.tbl-view tr:first-child td {border-top:0;}
+                            .tbl-view th {background-color:#f0f0f0;}
+                            .tbl-view td {color:#444;}
+                        </pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // view -->
+
+            </section>
+        </div>
+
+
+        <!-- Write -->
+        <h3>Write</h3>
+        <div class="content-body">
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>예시</h4>
+                </header>
+                <div class="section-body">
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-15">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-16">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="tbl-group">
+                                <div class="tbl write">
+                                    <table>
+                                        <caption>
+                                            <strong>제목 요약</strong>
+                                            <p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.</p>
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td class="col-subject">
+                                                    <input type="text" name="sID" id="sID" value="" placeholder="" class="input">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">연락처</th>
+                                                <td class="col-call">
+                                                    <div class="form-controls type-telNo">
+                                                        <select name="sTelNo" id="sTelNo1" title="지역 번호" class="select demo1">
+                                                            <option value="">02</option>
+                                                        </select>
+                                                        <span class="form-split">-</span>
+                                                        <input type="tel" name="sTelNo" id="sTelNo2" value="" placeholder="" title="국 번호" class="input demo1">
+                                                        <span class="form-split">-</span>
+                                                        <input type="tel" name="sTelNo" id="sTelNo3" value="" placeholder="" title="가입자 번호" class="input demo1">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이메일</th>
+                                                <td class="col-email">
+                                                    <div class="form-controls type-email2">
+                                                        <input type="text" name="sEmail" id="sEmail1" value="" placeholder="" title="이메일 사용자 아이디" class="input demo1">
+                                                        <span class="form-split">@</span>
+                                                        <input type="text" name="sEmail" id="sEmail2" value="" placeholder="" title="이메일 서비스 도메인" class="input demo1">
+                                                        <select name="sEmail2" id="sEmail4" title="이메일 서비스 도메인" class="select demo1">
+                                                            <option value="">선택하세요.</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">내용</th>
+                                                <td class="">
+                                                    <textarea name="" id="txt2" rows="10" cols="100" placeholder="에디터 영역입니다" disabled=""></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">파일<br />첨부</th>
+                                                <td class="col-file">
+                                                    <div class="form-controls vertical type-file">
+                                                        <div class="row">
+                                                            <span class="file">
+                                                                <input type="text" id="sFileName21" class="input demo1" title="첨부된 파일명">
+                                                                <label for="sFilesAdd21" class="btn demo2 btn_file" role="button">
+                                                                    <span><input type="file" name="sFilesAdd21" id="sFilesAdd21" value="찾아보기" tabindex="-1" aria-hidden="true" onchange="fileAttachSrc(this, event)">첨부</span>
+                                                                </label>
+                                                                <button type="button" class="btn demo2 type-add" onclick="fileAttachAdd(this, 'sFilesAdd2')"><span>추가</span></button>
+                                                                <button type="button" class="btn demo2 type-remove" onclick="fileAttachRemove(this)"><span>삭제</span></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-15" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="tbl-group">
+            <div class="tbl write">
+              <table>
+                <caption>
+                  <strong>제목 요약</strong>
+                  <p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.</p>
+                </caption>
+                <colgroup>
+                  <col style="width:20%">
+                  <col style="width:auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">제목</th>
+                    <td class="col-subject">
+                      <input type="text" name="sID" id="sID" value="" placeholder="" class="input">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">연락처</th>
+                    <td class="col-call">
+                      <div class="form-controls type-telNo">
+                        <select name="sTelNo" id="sTelNo1" title="지역 번호" class="select demo1">
+                          <option value="">02</option>
+                        </select>
+                        <span class="form-split">-</span>
+                        <input type="tel" name="sTelNo" id="sTelNo2" value="" placeholder="" title="국 번호" class="input demo1">
+                        <span class="form-split">-</span>
+                        <input type="tel" name="sTelNo" id="sTelNo3" value="" placeholder="" title="가입자 번호" class="input demo1">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이메일</th>
+                    <td class="col-email">
+                      <div class="form-controls type-email2">
+                        <input type="text" name="sEmail" id="sEmail1" value="" placeholder="" title="이메일 사용자 아이디" class="input demo1">
+                        <span class="form-split">@</span>
+                        <input type="text" name="sEmail" id="sEmail2" value="" placeholder="" title="이메일 서비스 도메인" class="input demo1">
+                        <select name="sEmail2" id="sEmail4" title="이메일 서비스 도메인" class="select demo1">
+                          <option value="">선택하세요.</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">내용</th>
+                    <td class="">
+                      <textarea name="" id="txt2" rows="10" cols="100" placeholder="에디터 영역입니다" disabled=""></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">파일<br />첨부</th>
+                    <td class="col-file">
+                      <div class="form-controls vertical type-file">
+                        <div class="row">
+                          <span class="file">
+                            <input type="text" id="sFileName21" class="input demo1" title="첨부된 파일명">
+                            <label for="sFilesAdd21" class="btn demo2 btn_file" role="button">
+                              <span><input type="file" name="sFilesAdd21" id="sFilesAdd21" value="찾아보기" tabindex="-1" aria-hidden="true" onchange="fileAttachSrc(this, event)">첨부</span>
+                            </label>
+                            <button type="button" class="btn demo2 type-add" onclick="fileAttachAdd(this, 'sFilesAdd2')"><span>추가</span></button>
+                            <button type="button" class="btn demo2 type-remove" onclick="fileAttachRemove(this)"><span>삭제</span></button>
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-16" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+          /* board write */
+          .tbl.write {border-top:2px solid #444;}
+          .tbl.write th, .tbl.write td {font-size: 15px; padding: 10px 15px;}
+          .tbl.write th br {display: none;}
+          .tbl.write td {line-height: 40px}
+          .tbl.write input {margin:0;}
+          .tbl.write td.col-subject > input {width:100%;}
+          .tbl.write td.col-call .form-controls {max-width: 320px;}
+          .tbl.write td.col-email .form-controls.type-email2 .select {margin-left: 5px;}
+          .tbl.write td.col-file .file .btn {margin: 0 0 0 3px;}
+          .tbl.write td.col-file .row + .row {margin-top: 6px;}
+          .tbl.write textarea[disabled] {box-sizing: border-box;  width: 100%; padding: 9px 13px; border: 1px solid #BDBDBD; background: #F5F5F5;   cursor: default; border-radius: 3px;}
+        </pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Write -->
+
+            </section>
+        </div>
+
+        <h3>Pager</h3>
+        <div class="content-body">
+            <section class="section inr">
+                <header class="section-header">
+                    <h4>예시</h4>
+                </header>
+                <div class="section-body">
+                    <div class="g-example-wrap">
+                        <div class="g-example-header">
+                            <strong class="g-example-tit">Markup Codeview</strong>
+                            <div class="g-example-nav">
+                                <span class="g-example-txt"></span>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-17">HTML</a>
+                                <a href="javascript:;" class="g-example-btn" data-tab="tab-18">CSS</a>
+                            </div>
+                        </div>
+                        <div class="g-example-body">
+                            <!-- 마크업뷰영역 -->
+                            <div class="tbl-group">
+                                <div class="tbl tbl-pager">
+                                    <table>
+                                        <caption>
+                                            <strong>페이지 넘기기</strong>
+                                            <p>이 표는 다음, 이전으로 구성되었습니다.</p>
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width:12%;">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">이 전</th>
+                                                <td>
+                                                    <a href="javascript:;">
+                                                        휴대폰 유무선 충전 관련 안전 주의 사항
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">다 음</th>
+                                                <td>
+                                                    <a href="javascript:;">
+                                                        삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //마크업뷰영역 -->
+                        </div>
+                        <div id="tab-17" class="g-example-footer tab-content">
+                            <pre class="brush:html">
+          <div class="tbl-group">
+            <div class="tbl tbl-pager">
+              <table>
+                <caption>
+                  <strong>페이지 넘기기</strong>
+                  <p>이 표는 다음, 이전으로 구성되었습니다.</p>
+                </caption>
+                <colgroup>
+                  <col style="width:12%;">
+                  <col style="width:auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">이 전</th>
+                    <td>
+                      <a href="javascript:;">
+                        휴대폰 유무선 충전 관련 안전 주의 사항
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">다 음</th>
+                    <td>
+                      <a href="javascript:;">
+                        삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+                        </pre>
+                        </div>
+                        <div id="tab-18" class="g-example-footer tab-content">
+                            <pre class="brush:css">
+                            /* Pager Type */
+                            .tbl-pager {border-top:2px solid #444; border-bottom:1px solid #444;}
+                            .tbl-pager th, .tbl-pager td {padding:10px 20px; text-align:left; line-height:18px; border-top:1px solid #ddd;}
+                            .tbl-pager tr:first-child th,.tbl-pager tr:first-child td {border-top:0;}
+                            .tbl-pager td {color:#444;}</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+
+
+    </article>
+</body>
+</html>
+<script>
+    $(function() {
+        /* 말줄임 (2020-09-02) */
+        var $clampArry = document.querySelectorAll('.multi-clamp-txt');
+        for (var i = 0; i < $clampArry.length; i++) {
+            eval('var $clampTxt' + i + '=new MultiClamp($clampArry.item(' + i + '), {splitByWords: true, disableCssClamp: true, ellipsis: "...", clamp: 2})');
+        }
+        $(window).resize(function() {
+            for (var i = 0; i < $clampArry.length; i++) {
+                eval('$clampTxt' + i + '.reload({useOriginalText: true, splitByWords: true, disableCssClamp: true, ellipsis: "...", clamp: 2})');
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: '',
+                center: 'prev,title,next',
+                right: ''
+            },
+            fixedWeekCount: false,
+            dayMaxEventRows: true, // for all non-TimeGrid views
+            locale: 'ko',
+            defaultDate: '${searchMonth}-01',
+            contentHeight: 650,
+            events: [{
+                    className: 'label label-success',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-16'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-16'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-16'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 04',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-16'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-17'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-17'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-17'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-18'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-18'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-18'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-15'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-15'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-15'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-22'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-22'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-22'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-23'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-23'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-23'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-24'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-24'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-24'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-26'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-26'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-26'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-29'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-29'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-29'
+                },
+                {
+                    className: 'label label-warning',
+                    title: '분류 01',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-30'
+                },
+                {
+                    className: 'label label-danger',
+                    title: '분류 02',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-30'
+                },
+                {
+                    className: 'label label-success',
+                    title: '분류 03',
+                    url: '',
+                    color: "transparent",
+                    start: '2021-03-30'
+                }
+            ],
+            googleCalendarApiKey: 'AIzaSyAkKWTdN9DwPdaPZVWqF3tJ4hnqPhtLZdI',
+            eventSources: // 한국 기념일 ko.south_korea 추가
+                [{
+                    googleCalendarId: "ko.south_korea#holiday@group.v.calendar.google.com",
+                    className: "koHolidays",
+                    color: "transparent",
+                    textColor: "#FFFFFF",
+                    fontSize: "10px"
+                }, ],
+        });
+        calendar.render();
+    });
+
+    $('#calendar').on('DOMSubtreeModified', function() {
+        console.log("asdasd");
+        $('.koHolidays').parents(".fc-daygrid-day-frame").addClass("on");
+    });
+</script>
