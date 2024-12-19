@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/libs/jquery/jquery-ui-1.12.1.min.css">
+    <link rel="stylesheet" href="static/libs/remixicon/remixicon-2.5.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css">
+    <link rel="stylesheet" href="static/css/sanitize-12.0.1.css">
+    <link rel="stylesheet" href="static/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/components.css">
+    <link rel="stylesheet" href="static/css/guide.css">
+
+    <style media="screen">
+        .syntaxhighlighter {overflow-y: hidden ! important;}
+        .syntaxhighlighter .line.alt1 {background-color: #f0f0f0 !important;}
+        .syntaxhighlighter table {table-layout: auto;}
+        .syntaxhighlighter table td.code .line {padding: 0.3em 1em !important;}
+        .syntaxhighlighter table td.gutter .line {padding: 0.3em 1em !important;}
+    </style>
+
+    <script src="static/libs/jquery/jquery-1.12.4.min.js"></script>
+    <script src="static/libs/jquery/jquery-ui-1.12.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.min.js"></script>
+    <script src="static/js/base.js"></script>
+    <script src="static/js/components.js"></script>
+    <script src="static/js/guide.js"></script>
+    <script>
+        SyntaxHighlighter.all();
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header id="header">
+            <div class="header-inr">
+                <h1>Interactions</h1>
+            </div>
+        </header>
+        <!-- // Header -->
+
+        <!-- Container -->
+        <main id="container">
+            <article id="content">
+                <nav class="content-nav">
+                    <h2>Interactions</h2>
+                    <ul class="inr">
+                        <li><a href="">Cubic Bezier</a></li>
+                        <li><a href="">Scroll Animate</a></li>
+                        <li><a href="">Parallex</a></li>
+                    </ul>
+                </nav>
+
+                <article>
+                    <h3>Cubic Bezier</h3>
+                    <style media="screen">
+                    .css-cubic {width:50px; height:50px; background-color:#874bf1; line-height:50px; text-align:center; color:#fff; transform:translateX(0); transition:transform 1s 0.5s}
+                    .css-cubic.is-active {transform:translateX(500px);}
+
+                    .ease.power1 {transition-timing-function:cubic-bezier(.32,.1,.25,1);}
+                    .ease.power2 {transition-timing-function:cubic-bezier(.28,.1,.25,1);}
+                    .ease.power3 {transition-timing-function:cubic-bezier(.25,.1,.25,1);}
+                    .ease.power4 {transition-timing-function:cubic-bezier(.23,.1,.25,1);}
+                    .ease.power5 {transition-timing-function:cubic-bezier(.21,.1,.25,1);}
+
+                    .ease-in.power1 {transition-timing-function:cubic-bezier(.62,0,1,1);}
+                    .ease-in.power2 {transition-timing-function:cubic-bezier(.52,0,1,1);}
+                    .ease-in.power3 {transition-timing-function:cubic-bezier(.42,0,1,1);}
+                    .ease-in.power4 {transition-timing-function:cubic-bezier(.32,0,1,1);}
+                    .ease-in.power5 {transition-timing-function:cubic-bezier(.22,0,1,1);}
+
+                    .ease-out.power1 {transition-timing-function:cubic-bezier(0,0,.78,1);}
+                    .ease-out.power2 {transition-timing-function:cubic-bezier(0,0,.68,1);}
+                    .ease-out.power3 {transition-timing-function:cubic-bezier(0,0,.58,1);}
+                    .ease-out.power4 {transition-timing-function:cubic-bezier(0,0,.48,1);}
+                    .ease-out.power5 {transition-timing-function:cubic-bezier(0,0,.38,1);}
+
+                    .ease-in-out.power1 {transition-timing-function:cubic-bezier(.52,0,.68,1);}
+                    .ease-in-out.power2 {transition-timing-function:cubic-bezier(.47,0,.63,1);}
+                    .ease-in-out.power3 {transition-timing-function:cubic-bezier(.42,0,.58,1);}
+                    .ease-in-out.power4 {transition-timing-function:cubic-bezier(.37,0,.53,1);}
+                    .ease-in-out.power5 {transition-timing-function:cubic-bezier(.32,0,.48,1);}
+                    </style>
+                    <div class="content-body">
+                        <section class="section inr">
+                            <header class="section-header">
+                                <h4>예시</h4>
+                            </header>
+
+                            <div class="section-body">
+                                <div>
+                                    <ul class="list">
+                                        <li>cubic-bezier(StartX축, StartY축, EndX축, EndY축)</li>
+                                        <li>X축 : 수치가 높을수록 느리다.</li>
+                                        <li>Y축 : 수치가 높을수록 빠르다.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h5>ease</h5>
+                                    <div>
+                                        <div class="g-example-wrap">
+                                            <div class="g-example-header">
+                                                <strong class="g-example-tit is-before"></strong>
+                                                <div class="g-example-nav">
+                                                    <span class="g-example-txt"></span>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-ease">CSS</a>
+                                                </div>
+                                            </div>
+                                            <div class="g-example-body">
+                                                <div class="g-example-preview">
+                                                    <div class="ease power1 css-cubic"></div>
+                                                    <p>ease1, cubic-bezier(.32,.1,.25,1) <button type="button" class="btn demo1" onclick="$('.ease.power1').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease power2 css-cubic"></div>
+                                                    <p>ease2, cubic-bezier(.28,.1,.25,1) <button type="button" class="btn demo1" onclick="$('.ease.power2').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease power3 css-cubic"></div>
+                                                    <p>ease3, cubic-bezier(.25,.1,.25,1) <button type="button" class="btn demo1" onclick="$('.ease.power3').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease power4 css-cubic"></div>
+                                                    <p>ease4, cubic-bezier(.23,.1,.25,1) <button type="button" class="btn demo1" onclick="$('.ease.power4').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease power5 css-cubic"></div>
+                                                    <p>ease5, cubic-bezier(.21,.1,.25,1) <button type="button" class="btn demo1" onclick="$('.ease.power5').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <br><br>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease').removeClass('is-active')"><span>RESET</span></button>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease').addClass('is-active')"><span>ACTION</span></button>
+                                                </div>
+                                            </div>
+                                            <div id="tab-ease" class="g-example-footer tab-content">
+                                                <pre class="brush:css">
+                                                    .ease.power1 {transition:transform 1s 0.5s cubic-bezier(.32,.1,.25,1);}
+                                                    .ease.power2 {transition:transform 1s 0.5s cubic-bezier(.28,.1,.25,1);}
+                                                    .ease.power3 {transition:transform 1s 0.5s cubic-bezier(.25,.1,.25,1);}
+                                                    .ease.power4 {transition:transform 1s 0.5s cubic-bezier(.23,.1,.25,1);}
+                                                    .ease.power5 {transition:transform 1s 0.5s cubic-bezier(.21,.1,.25,1);}
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5>ease-in</h5>
+                                    <div>
+                                        <div class="g-example-wrap">
+                                            <div class="g-example-header">
+                                                <strong class="g-example-tit is-before"></strong>
+                                                <div class="g-example-nav">
+                                                    <span class="g-example-txt"></span>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-ease-in">CSS</a>
+                                                </div>
+                                            </div>
+                                            <div class="g-example-body">
+                                                <div class="g-example-preview">
+                                                    <div class="ease-in power1 css-cubic"></div>
+                                                    <p>ease-in1, cubic-bezier(.52,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in.power1').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in power2 css-cubic"></div>
+                                                    <p>ease-in2, cubic-bezier(.47,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in.power2').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in power3 css-cubic"></div>
+                                                    <p>ease-in3, cubic-bezier(.42,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in.power3').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in power4 css-cubic"></div>
+                                                    <p>ease-in4, cubic-bezier(.37,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in.power4').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in power5 css-cubic"></div>
+                                                    <p>ease-in5, cubic-bezier(.32,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in.power5').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <br><br>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease-in').removeClass('is-active')"><span>RESET</span></button>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease-in').addClass('is-active')"><span>ACTION</span></button>
+                                                </div>
+                                            </div>
+                                            <div id="tab-ease-in" class="g-example-footer tab-content">
+                                                <pre class="brush:css">
+                                                    .ease-in.power1 {transition:transform 1s 0.5s cubic-bezier(.52,0,1,1);}
+                                                    .ease-in.power2 {transition:transform 1s 0.5s cubic-bezier(.47,0,1,1);}
+                                                    .ease-in.power3 {transition:transform 1s 0.5s cubic-bezier(.42,0,1,1);}
+                                                    .ease-in.power4 {transition:transform 1s 0.5s cubic-bezier(.37,0,1,1);}
+                                                    .ease-in.power5 {transition:transform 1s 0.5s cubic-bezier(.32,0,1,1);}
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5>ease-out</h5>
+                                    <div>
+                                        <div class="g-example-wrap">
+                                            <div class="g-example-header">
+                                                <strong class="g-example-tit is-before"></strong>
+                                                <div class="g-example-nav">
+                                                    <span class="g-example-txt"></span>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-ease-out">CSS</a>
+                                                </div>
+                                            </div>
+                                            <div class="g-example-body">
+                                                <div class="g-example-preview">
+                                                    <div class="ease-out power1 css-cubic"></div>
+                                                    <p>ease-out1, cubic-bezier(.52,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-out.power1').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-out power2 css-cubic"></div>
+                                                    <p>ease-out2, cubic-bezier(.47,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-out.power2').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-out power3 css-cubic"></div>
+                                                    <p>ease-out3, cubic-bezier(.42,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-out.power3').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-out power4 css-cubic"></div>
+                                                    <p>ease-out4, cubic-bezier(.37,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-out.power4').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-out power5 css-cubic"></div>
+                                                    <p>ease-out5, cubic-bezier(.32,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-out.power5').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <br><br>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease-out').removeClass('is-active')"><span>RESET</span></button>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease-out').addClass('is-active')"><span>ACTION</span></button>
+                                                </div>
+                                            </div>
+                                            <div id="tab-ease-out" class="g-example-footer tab-content">
+                                                <pre class="brush:css">
+                                                    .ease-out.power1 {transition:transform 1s 0.5s cubic-bezier(0,0,.78,1);}
+                                                    .ease-out.power2 {transition:transform 1s 0.5s cubic-bezier(0,0,.68,1);}
+                                                    .ease-out.power3 {transition:transform 1s 0.5s cubic-bezier(0,0,.58,1);}
+                                                    .ease-out.power4 {transition:transform 1s 0.5s cubic-bezier(0,0,.48,1);}
+                                                    .ease-out.power5 {transition:transform 1s 0.5s cubic-bezier(0,0,.38,1);}
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5>ease-in-out</h5>
+                                    <div>
+                                        <div class="g-example-wrap">
+                                            <div class="g-example-header">
+                                                <strong class="g-example-tit is-before"></strong>
+                                                <div class="g-example-nav">
+                                                    <span class="g-example-txt"></span>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-ease-in-out">CSS</a>
+                                                </div>
+                                            </div>
+                                            <div class="g-example-body">
+                                                <div class="g-example-preview">
+                                                    <div class="ease-in-out power1 css-cubic"></div>
+                                                    <p>ease-in-out1, cubic-bezier(.52,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in-out.power1').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in-out power2 css-cubic"></div>
+                                                    <p>ease-in-out2, cubic-bezier(.47,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in-out.power2').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in-out power3 css-cubic"></div>
+                                                    <p>ease-in-out3, cubic-bezier(.42,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in-out.power3').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in-out power4 css-cubic"></div>
+                                                    <p>ease-in-out4, cubic-bezier(.37,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in-out.power4').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <div class="ease-in-out power5 css-cubic"></div>
+                                                    <p>ease-in-out5, cubic-bezier(.32,0,1,1) <button type="button" class="btn demo1" onclick="$('.ease-in-out.power5').toggleClass('is-active')"><span>토글</span></button></p>
+                                                    <br><br>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease-in-out').removeClass('is-active')"><span>RESET</span></button>
+                                                    <button type="button" class="btn demo1" onclick="$('.ease-in-out').addClass('is-active')"><span>ACTION</span></button>
+                                                </div>
+                                            </div>
+                                            <div id="tab-ease-in-out" class="g-example-footer tab-content">
+                                                <pre class="brush:css">
+                                                    .ease-in-out.power1 {transition:transform 1s 0.5s cubic-bezier(.46,0,.62,1);}
+                                                    .ease-in-out.power2 {transition:transform 1s 0.5s cubic-bezier(.44,0,.60,1);}
+                                                    .ease-in-out.power3 {transition:transform 1s 0.5s cubic-bezier(.42,0,.58,1);}
+                                                    .ease-in-out.power4 {transition:transform 1s 0.5s cubic-bezier(.40,0,.56,1);}
+                                                    .ease-in-out.power5 {transition:transform 1s 0.5s cubic-bezier(.38,0,.54,1);}
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <h3>Scroll Animate</h3>
+                    <style media="screen">
+                    .to-animate-sec {opacity:0;}
+                    .to-animate {opacity:0;}
+                    .animate-sec {height:100px; border:1px solid #ddd; border-radius:10px;}
+                    .animate-sec + .animate-sec {margin-top:50px;}
+                    .animate-head {border-bottom:1px solid #ddd;}
+                    .delay-03 {-webkit-animation-delay: 0.3s; animation-delay: 0.3s;}
+                    .delay-05 {-webkit-animation-delay: 0.5s; animation-delay: 0.5s;}
+                    .animated {
+                      -webkit-animation-duration: 1s;
+                      animation-duration: 1s;
+                      -webkit-animation-fill-mode: both;
+                      animation-fill-mode: both;
+                    }
+                    .fadeInUp {
+                      -webkit-animation-name: fadeInUp;
+                      animation-name: fadeInUp;
+                    }
+                    </style>
+                    <script>
+                    $(document).ready(function(){
+                        var $eleAnimateSec = $('.to-animate-sec');
+                        var clsAnimate = 'animated';
+                        var percent = 0.5;
+                        var time = null;
+
+                        function action(){
+                            $eleAnimateSec.each(function(){
+                                var $this = $(this);
+                                var objH = $this.offset().top + ($this.outerHeight() * percent);
+                                var winH = $(window).scrollTop() + $(window).outerHeight();
+
+                                if (winH > objH){
+                                    $this.addClass(clsAnimate).addClass($this.attr('data-animate'));
+                                    $this.find('.to-animate').each(function(){
+                                        $(this).addClass(clsAnimate).addClass($(this).attr('data-delay')).addClass($(this).attr('data-animate'));
+                                    })
+                                }
+                            })
+                        }
+                        $(window).on('scroll', function(){
+                            clearTimeout(time);
+                            time = setTimeout(function(){ action() });
+                        })
+
+                        action();
+                    });
+                    </script>
+                    <div class="content-body">
+                        <section class="section inr">
+                            <header class="section-header">
+                                <h4>예시</h4>
+                            </header>
+
+                            <div class="section-body">
+                                <div>
+                                    <div class="g-example-wrap">
+                                        <div class="g-example-header">
+                                            <strong class="g-example-tit is-before"></strong>
+                                            <div class="g-example-nav">
+                                                <span class="g-example-txt"></span>
+                                                <a href="javascript:;" class="g-example-btn" data-tab="tab-scroll-html">HTML</a>
+                                                <a href="javascript:;" class="g-example-btn" data-tab="tab-scroll-css">CSS</a>
+                                                <a href="javascript:;" class="g-example-btn" data-tab="tab-scroll-script">SCRIPT</a>
+                                            </div>
+                                        </div>
+                                        <div class="g-example-body">
+                                            <div class="g-example-preview">
+                                                <div class="animate-sec to-animate-sec" data-animate="fadeInUp">
+                                                    <div class="animate-head to-animate" data-delay="delay-03" data-animate="fadeInUp">우리나라 금수강산</div>
+                                                    <div class="animate-body to-animate" data-delay="delay-05" data-animate="fadeInUp">대한민국 만세</div>
+                                                </div>
+                                                <div class="animate-sec to-animate-sec" data-animate="fadeInUp">
+                                                    2
+                                                    <div class="animate-head to-animate" data-delay="delay-03" data-animate="fadeInUp">너네나라 금수강산</div>
+                                                    <div class="animate-body to-animate" data-delay="delay-05" data-animate="fadeInUp">대한민국 만세</div>
+                                                </div>
+                                                <div class="animate-sec to-animate-sec" data-animate="fadeInUp">
+                                                    3
+                                                    <div class="animate-head to-animate" data-delay="delay-03" data-animate="fadeInUp">그네나라 금수강산</div>
+                                                    <div class="animate-body to-animate" data-delay="delay-05" data-animate="fadeInUp">대한민국 만세</div>
+                                                </div>
+                                                <div class="animate-sec to-animate-sec" data-animate="fadeInUp">
+                                                    4
+                                                    <div class="animate-head to-animate" data-delay="delay-03" data-animate="fadeInUp">저네나라 금수강산</div>
+                                                    <div class="animate-body to-animate" data-delay="delay-05" data-animate="fadeInUp">대한민국 만세</div>
+                                                </div>
+                                                <div class="animate-sec to-animate-sec" data-animate="fadeInUp">
+                                                    5
+                                                    <div class="animate-head to-animate" data-delay="delay-03" data-animate="fadeInUp">남의나라 금수강산</div>
+                                                    <div class="animate-body to-animate" data-delay="delay-05" data-animate="fadeInUp">대한민국 만세</div>
+                                                </div>
+                                                <div class="animate-sec to-animate-sec" data-animate="fadeInUp">
+                                                    6
+                                                    <div class="animate-head to-animate" data-delay="delay-03" data-animate="fadeInUp">나의나라 금수강산</div>
+                                                    <div class="animate-body to-animate" data-delay="delay-05" data-animate="fadeInUp">대한민국 만세</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab-scroll-html" class="g-example-footer tab-content">
+                                            <pre class="brush:html">
+                                                <div class="to-animate-sec" data-animate="fadeInUp">
+                                                    <div class="to-animate" data-duration="dur-03" data-delay="delay-03" data-animate="fadeInUp"></div>
+                                                    <div class="to-animate" data-duration="dur-05" data-delay="delay-05" data-animate="fadeInUp"></div>
+                                                </div>
+                                            </pre>
+                                        </div>
+                                        <div id="tab-scroll-css" class="g-example-footer tab-content">
+                                            <pre class="brush:css">
+                                                .to-animate-sec {opacity:0;}
+                                                .to-animate {opacity:0;}
+                                                .animate-sec {height:100px; border:1px solid #ddd; border-radius:10px;}
+                                                .animate-sec + .animate-sec {margin-top:50px;}
+                                                .animate-head {border-bottom:1px solid #ddd;}
+                                                .delay-03 {-webkit-animation-delay: 0.3s; animation-delay: 0.3s;}
+                                                .delay-05 {-webkit-animation-delay: 0.5s; animation-delay: 0.5s;}
+                                                .animated {
+                                                  -webkit-animation-duration: 1s;
+                                                  animation-duration: 1s;
+                                                  -webkit-animation-fill-mode: both;
+                                                  animation-fill-mode: both;
+                                                }
+                                                .fadeInUp {
+                                                  -webkit-animation-name: fadeInUp;
+                                                  animation-name: fadeInUp;
+                                                }
+                                            </pre>
+                                        </div>
+                                        <div id="tab-scroll-script" class="g-example-footer tab-content">
+                                            <pre class="brush:js">
+                                                $(document).ready(function(){
+                                                    var $eleAnimateSec = $('.to-animate-sec');
+                                                    var clsAnimate = 'animated';
+                                                    var percent = 0.5;
+                                                    var time = null;
+
+                                                    function action(){
+                                                        $eleAnimateSec.each(function(){
+                                                            var $this = $(this);
+                                                            var objH = $this.offset().top + ($this.outerHeight() * percent);
+                                                            var winH = $(window).scrollTop() + $(window).outerHeight();
+
+                                                            if (winH > objH){
+                                                                $this.addClass(clsAnimate).addClass($this.attr('data-animate'));
+                                                                $this.find('.to-animate').each(function(){
+                                                                    $(this).addClass(clsAnimate).addClass($(this).attr('data-delay')).addClass($(this).attr('data-animate'));
+                                                                })
+                                                            }
+                                                        })
+                                                    }
+                                                    $(window).on('scroll', function(){
+                                                        clearTimeout(time);
+                                                        time = setTimeout(function(){ action() });
+                                                    })
+
+                                                    action();
+                                                });
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <h3>Parallex</h3>
+                    <style media="screen">
+                    .parallex-area {position:relative; height:400px;}
+                    .object-1 {position:absolute; left:0; top:0; display:flex; justify-content:center; align-items:center; height:100px; width:100px; background-color:#000; color:#fff;}
+                    </style>
+                    <script>
+                    $(function(){
+                        var $evtBox = $('.parallex-1'),
+                            $evtSttTg = $evtBox.parents('.content-body').prevAll('h3').eq(0);
+
+                        var evtSttPoint = $evtSttTg.offset().top;
+
+                        var scr_t = 0 - evtSttPoint;
+                        var max_t = 300;
+                        var limit_t = 500;
+                        var speed = max_t/limit_t;
+
+                        var parallex = function(){
+                            var value = scr_t * speed;
+                            console.log(scr_t < limit_t, scr_t, limit_t, value);
+                            if (scr_t < limit_t){
+                                $('.object-1').css({'transform':'translateY('+value+'px)'});
+                            }
+                            if (value < 0){
+                                $('.object-1').css({'transform':'translateY(0)'});
+                            }
+                        };
+                        $(window).on('scroll', function(){
+                            scr_t = $(window).scrollTop() - evtSttPoint;
+                            parallex();
+                        });
+                        $(window).trigger('scroll');
+                    });
+                    </script>
+                    <div class="content-body">
+                        <section class="section inr">
+                            <header class="section-header">
+                                <h4>예시</h4>
+                            </header>
+
+                            <div class="section-body">
+                                <div>
+                                    <h5>Basic</h5>
+                                    <div>
+                                        <div class="g-example-wrap">
+                                            <div class="g-example-header">
+                                                <strong class="g-example-tit is-before"></strong>
+                                                <div class="g-example-nav">
+                                                    <span class="g-example-txt"></span>
+                                                    <a href="javascript:;" class="g-example-btn current" data-tab="tab-parallex-basic-html">HTML</a>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-parallex-basic-css">CSS</a>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-parallex-basic-script">SCRIPT</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab-parallex-basic-html" class="g-example-footer tab-content current">
+                                                <pre class="brush:html">
+                                                    <div class="parallex-area parallex-1">
+                                                        <div class="object-1">
+                                                            Object
+                                                        </div>
+                                                    </div>
+                                                </pre>
+                                            </div>
+                                            <div id="tab-parallex-basic-css" class="g-example-footer tab-content">
+                                                <pre class="brush:css">
+                                                    .parallex-area {position:relative; height:400px;}
+                                                    .object-1 {position:absolute; left:0; top:0; display:flex; justify-content:center; align-items:center; height:100px; width:100px; background-color:#000; color:#fff;}
+                                                </pre>
+                                            </div>
+                                            <div id="tab-parallex-basic-script" class="g-example-footer tab-content">
+                                                <pre class="brush:js">
+                                                    $(function(){
+                                                        var scr_t = 0;
+                                                        var max_t = 300;
+                                                        var limit_t = 500;
+                                                        var speed = max_t/limit_t;
+
+                                                        var parallex = function(){
+                                                            var value = scr_t * speed;
+                                                            if (scr_t < limit_t){
+                                                                $('.object-1').css({'transform':'translateY('+value+'px)'});
+                                                            }
+                                                        };
+                                                        $(window).on('scroll', function(){
+                                                            scr_t = $(window).scrollTop();
+                                                            parallex();
+                                                        });
+                                                        $(window).trigger('scroll');
+                                                    });
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5>Example</h5>
+                                    <div>
+                                        <div class="g-example-wrap">
+                                            <div class="g-example-header">
+                                                <strong class="g-example-tit is-before"></strong>
+                                                <div class="g-example-nav">
+                                                    <span class="g-example-txt"></span>
+                                                    <a href="javascript:;" class="g-example-btn" data-tab="tab-parallex-example-script">SCRIPT</a>
+                                                </div>
+                                            </div>
+                                            <div class="g-example-body">
+                                                <div class="g-example-preview">
+                                                    <div class="parallex-area parallex-1">
+                                                        <div class="object-1">
+                                                            Object
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab-parallex-example-script" class="g-example-footer tab-content">
+                                                <pre class="brush:js">
+                                                    $(function(){
+                                                        var $evtBox = $('.parallex-1'),
+                                                            $evtSttTg = $evtBox.parents('.content-body').prevAll('h3').eq(0);
+
+                                                        var evtSttPoint = $evtSttTg.offset().top;
+
+                                                        var scr_t = 0 - evtSttPoint;
+                                                        var max_t = 300;
+                                                        var limit_t = 500;
+                                                        var speed = max_t/limit_t;
+
+                                                        var parallex = function(){
+                                                            var value = scr_t * speed;
+                                                            console.log(scr_t < limit_t, scr_t, limit_t, value);
+                                                            if (scr_t < limit_t){
+                                                                $('.object-1').css({'transform':'translateY('+value+'px)'});
+                                                            }
+                                                            if (value < 0){
+                                                                $('.object-1').css({'transform':'translateY(0)'});
+                                                            }
+                                                        };
+                                                        $(window).on('scroll', function(){
+                                                            scr_t = $(window).scrollTop() - evtSttPoint;
+                                                            parallex();
+                                                        });
+                                                        $(window).trigger('scroll');
+                                                    });
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </article>
+        </main>
+        <!-- // Container -->
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="footer-inr">
+
+            </div>
+        </footer>
+        <!-- // Footer -->
+    </div>
+</body>
+</html>
